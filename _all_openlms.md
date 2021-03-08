@@ -70,6 +70,24 @@ cd `open-lms`
 
 Open the server on http://127.0.0.1:5000
 
+You run Flask now in production mode. Each time you make a change, the server has to be stopped and started again via `flask run`.
+
+You can change stuff on the fly, by using flask debug mode.
+
+To enable flask debug, use:
+
+`export FLASK_DEBUG=1`
+
+If you add to the file `open-lms.py` you can also run the file directly via python.
+
+```
+if __name__ == '__main__':
+    app.run(debug=True)     
+```
+
+So now you can run:
+
+`python3 open-lms.py`
 
 
 
