@@ -1,8 +1,6 @@
-<!DOCTYPE html> 
-<!-- Deze template is zelf gemaakt. -->
-<html>
-    <title></title>
-    <body>
-        About, from the template
-    </body>
-</html>
+{% extends "layout.html" %} <!-- We breiden het standaard layout uit. Hierin zit ook het `block content` in. -->
+
+{% block content %} <!-- Zie `block content` in `layout.html-->
+    About page
+{% endblock content %} 
+

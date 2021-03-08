@@ -1,0 +1,14 @@
+<!DOCTYPE html> 
+<!-- Deze template is zelf gemaakt, deze hebben we `layout.html` gemaakt  -->
+<html>
+    {% if title %} <!-- Een if/else statement in Flask. -->
+    <title>Flask Blog - {{ title }}</title> 
+    {% else %}
+     <title>Flask Blog</title>
+    {% endif %}
+    <body>
+    {% block content %} 
+        <!-- Een `block` kan door de childitems overschreden worden. -->
+    {% endblock %}
+    </body>
+</html>

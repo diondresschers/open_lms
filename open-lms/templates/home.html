@@ -1,8 +1,13 @@
-<!DOCTYPE html> 
-<!-- Deze template is zelf gemaakt. -->
-<html>
-    <title></title>
-    <body>
-        Home Page, from the template
-    </body>
-</html>
+{% extends "layout.html" %} <!-- We breiden het standaard layout uit. Hierin zit ook het `block content` in. -->
+
+{% block content %} <!-- Zie `block content` in `layout.html-->
+     
+        Home page, from the template
+        
+        {% for post in posts %} <!-- De eerste `post` mag je zelf kiezen, de tweede `posts` is doorgegeven door Flask via de argument van de functie die gekoppeld is aan je Decorator.-->
+            <h1>{{ post.title }}</h1> <!-- De `title` is eerder gedefineerd in de functie. -->
+            <i>By {{ post.author }} on {{ post.date_posted }}</i>
+            <p>{{ post.content }} </p>
+        {% endfor %}
+
+{% endblock content %} <!-- Het is netjes om deze `endblock` te sluiten met `content`, dit is optioneel. -->
