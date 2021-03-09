@@ -5,9 +5,20 @@
         Home page, from the template
         
         {% for post in posts %} <!-- De eerste `post` mag je zelf kiezen, de tweede `posts` is doorgegeven door Flask via de argument van de functie die gekoppeld is aan je Decorator.-->
-            <h1>{{ post.title }}</h1> <!-- De `title` is eerder gedefineerd in de functie. -->
-            <i>By {{ post.author }} on {{ post.date_posted }}</i>
-            <p>{{ post.content }} </p>
+            <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                <a class="mr-2" href="#">{{ post.author }}</a> 
+                <small class="text-muted">{{ post.date_posted }}</small>
+                </div>
+                <h2><a class="article-title" href="#">{{ post.title }}</a></h2> <!-- De `title` is eerder gedefineerd in de functie. -->
+                <p class="article-content">{{ post.content }}</p>
+            </div>
+            </article>
         {% endfor %}
 
 {% endblock content %} <!-- Het is netjes om deze `endblock` te sluiten met `content`, dit is optioneel. -->
+
+
+
+

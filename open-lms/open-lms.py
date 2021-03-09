@@ -2,6 +2,8 @@
 
 from flask import Flask             # We are importing this `Flask`-class.
 from flask import render_template   # De `render_template`-functie is om templates te gebruiken in Flask.
+from flask import url_for           # This is a function that makes it easier to change afterwards the URL-locaion. See `URL BUILDING`, Page 12.
+
 app = Flask(__name__)               # We are making an instanse called `app` of this `Flask`-class. With `__name__`, it is default Python and it knows where to look for static files and templates.
 
 # Dit wordt wat dummy data, aangezien we nog geen database hebben.
